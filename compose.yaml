@@ -1,0 +1,12 @@
+name: app
+
+services:
+  server:
+    image: node:22.6.0-bullseye
+    user: node
+    volumes:
+    - ./:/usr/src/app
+    ports:
+      - "80:3000"
+    working_dir: /usr/src/app
+    command: npm run dev
